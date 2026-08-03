@@ -10,8 +10,8 @@
 
 ## Part 1. 초급 — GPT와 Codex의 세계로
 * [005. GPT란 무엇인가 — 거대 언어 모델(LLM)의 이해](005_GPT란_무엇인가_거대_언어_모델_LLM_의_이해.md)
-* [006. GPT-5.5: 2026년 최신 플래그십 모델](006_GPT-5.5_2026년_최신_플래그십_모델.md)
-* [007. 모델 라인업과 선택 기준 (5.5 / 5.4 / mini / spark)](007_모델_라인업과_선택_기준_5.5_5.4_mini_spark.md)
+* [006. GPT-5.6: 2026년 최신 플래그십 모델 (Sol · Terra · Luna)](006_GPT-5.6_2026년_최신_플래그십_모델.md)
+* [007. 모델 라인업과 선택 기준 (Sol / Terra / Luna / spark)](007_모델_라인업과_선택_기준_Sol_Terra_Luna.md)
 * [008. 토큰·컨텍스트 윈도우·추론 강도(reasoning effort)](008_토큰_컨텍스트_윈도우_추론_강도_reasoning_effort.md)
 * [009. ChatGPT vs API vs Codex — 무엇을 언제 쓰나](009_ChatGPT_vs_API_vs_Codex_무엇을_언제_쓰나.md)
 * [010. Codex란 무엇인가 — AI 코딩 에이전트의 등장](010_Codex란_무엇인가_AI_코딩_에이전트의_등장.md)

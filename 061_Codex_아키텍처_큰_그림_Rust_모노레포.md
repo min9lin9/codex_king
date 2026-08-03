@@ -57,7 +57,7 @@ docs/            ← 문서
    [사용자/UI]
        │  프롬프트
        ▼
-   [Codex 엔진(core)]  ── 모델 API(WebSocket) ──▶ [GPT-5.5]
+   [Codex 엔진(core)]  ── 모델 API(WebSocket) ──▶ [GPT-5.6]
        │  도구 호출(파일/명령/MCP)
        ▼
    [샌드박스 + execpolicy + 승인]  ← 안전 계층

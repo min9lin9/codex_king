@@ -1,6 +1,6 @@
 # 064. 모델 통신 — WebSocket Responses API
 
-Codex 엔진이 GPT-5.5와 실제로 어떻게 대화하는지 봅니다. 여기엔 성능을 위한 영리한 설계가 숨어 있습니다.
+Codex 엔진이 GPT-5.6과 실제로 어떻게 대화하는지 봅니다. 여기엔 성능을 위한 영리한 설계가 숨어 있습니다.
 
 ## Responses API
 
@@ -59,7 +59,7 @@ Codex는 모델과 OpenAI의 Responses API로 통신합니다. 일반적인 단�
 ## 모델·통신 관련 설정 (참고)
 
 ```toml
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_provider = "openai"      # 제공자 (커스텀 가능)
 # 스트림 idle 타임아웃 등 고급 설정도 존재
 ```

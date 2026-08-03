@@ -18,7 +18,7 @@ pip install openai-codex
 from openai_codex import Codex
 
 with Codex() as codex:
-    thread = codex.thread_start(model="gpt-5.5")
+    thread = codex.thread_start(model="gpt-5.6-sol")
     result = thread.run("이 폴더의 테스트를 실행하고 결과를 요약해줘")
     print(result.final_response)
 ```
@@ -29,7 +29,7 @@ with Codex() as codex:
 
 ```python
 with Codex() as codex:
-    thread = codex.thread_start(model="gpt-5.5")
+    thread = codex.thread_start(model="gpt-5.6-sol")
     thread.run("todo_api.py에 검색 기능을 추가해줘")
     thread.run("방금 기능의 테스트도 작성하고 실행해줘")  # 맥락 유지
 ```
@@ -44,7 +44,7 @@ from openai_codex import AsyncCodex
 
 async def main():
     async with AsyncCodex() as codex:
-        thread = codex.thread_start(model="gpt-5.4-mini")
+        thread = codex.thread_start(model="gpt-5.6-luna")
         result = await thread.run("README를 한 문단으로 요약해줘")
         print(result.final_response)
 
@@ -58,7 +58,7 @@ from openai_codex import Codex, Sandbox
 
 with Codex() as codex:
     thread = codex.thread_start(
-        model="gpt-5.5",
+        model="gpt-5.6-sol",
         # 샌드박스 수준 (개념): read_only | workspace_write | full_access
     )
 ```
@@ -74,7 +74,7 @@ REPOS = ["service-a", "service-b", "service-c"]
 
 def audit(repo: str) -> str:
     with Codex() as codex:
-        thread = codex.thread_start(model="gpt-5.4")
+        thread = codex.thread_start(model="gpt-5.6-terra")
         r = thread.run(
             "보안상 위험한 패턴(하드코딩된 비밀키 등)이 있는지 점검하고 "
             "발견 사항을 목록으로 요약해줘."

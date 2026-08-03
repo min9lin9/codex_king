@@ -5,10 +5,10 @@ Codex 설정의 주요 키를 한자리에 정리합니다. 위치는 `~/.codex/
 ## 모델·추론
 
 ```toml
-model = "gpt-5.5"                      # 기본 모델
+model = "gpt-5.6-terra"               # 기본 모델 (sol|terra|luna)
 model_provider = "openai"             # 제공자
-model_reasoning_effort = "medium"     # minimal|low|medium|high|xhigh
-model_context_window = 200000         # (보통 기본값)
+model_reasoning_effort = "medium"     # low|medium|high|xhigh|max|ultra
+model_context_window = 200000         # (보통 기본값. GPT-5.6 한도는 1,050,000)
 ```
 
 ## 인증

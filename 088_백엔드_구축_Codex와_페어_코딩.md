@@ -26,7 +26,7 @@ TaskFlow의 차별점입니다. AI가 할 일 목록을 보고 "오늘 뭐부터
 AI 우선순위 추천 기능을 추가하려고 해.
 - 입력: 사용자의 미완료 할 일 목록(제목, 마감일)
 - 출력: 우선순위 순서 + 각 항목에 한 줄 이유
-- GPT-5.5 API를 app/services/ai.py 에서 호출
+- GPT-5.6 API를 app/services/ai.py 에서 호출
 - API 키는 .env(OPENAI_API_KEY)
 단계 계획을 세워줘.
 ```
@@ -36,7 +36,7 @@ AI 우선순위 추천 기능을 추가하려고 해.
 ```text
 app/services/ai.py 를 만들어줘:
 - suggest_priority(todos: list) -> list 함수
-- OpenAI API(GPT-5.5)로 할 일 목록을 보내 우선순위와 이유를 받는다
+- OpenAI API(GPT-5.6)로 할 일 목록을 보내 우선순위와 이유를 받는다
 - 응답을 파싱해 [{title, reason, rank}] 형태로 반환
 - API 키 없거나 호출 실패 시: 마감일 기준 정렬로 폴백(graceful degradation)
 - 주석은 한국어, 키는 환경변수에서
@@ -56,7 +56,7 @@ def suggest_priority(todos: list) -> list:
     if not os.environ.get("OPENAI_API_KEY"):
         return _fallback_by_due(todos)   # 폴백
     try:
-        # GPT-5.5에 할 일 목록을 주고 우선순위 요청
+        # GPT-5.6에 할 일 목록을 주고 우선순위 요청
         # ... (응답 파싱) ...
         return ranked
     except Exception:

@@ -3,8 +3,8 @@
 > AI 에이전트와 함께하는 바이브 코딩 — 코드 한 줄부터 1인 SaaS까지
 
 - 저자: AI_Innovation_Studio
-- 기준 버전: GPT-5.5 / Codex CLI (2026년 6월)
-- 집필일: 2026년 6월 20일
+- 기준 버전: GPT-5.6 (Sol · Terra · Luna) / Codex CLI (2026년 8월)
+- 집필일: 2026년 6월 20일 (2026년 8월 3일 GPT-5.6 기준 개정)
 - 문의: leemanrank@gmail.com
 - 인공지능 정보공유 단톡방: https://open.kakao.com/o/s4OEqBai
 
@@ -26,8 +26,8 @@
 
 ## Part 1. 초급 — GPT와 Codex의 세계로
 - 005. GPT란 무엇인가 — 거대 언어 모델(LLM)의 이해
-- 006. GPT-5.5: 2026년 최신 플래그십 모델
-- 007. 모델 라인업과 선택 기준 (5.5 / 5.4 / mini / spark)
+- 006. GPT-5.6: 2026년 최신 플래그십 모델 (Sol · Terra · Luna)
+- 007. 모델 라인업과 선택 기준 (Sol / Terra / Luna / spark)
 - 008. 토큰·컨텍스트 윈도우·추론 강도(reasoning effort)
 - 009. ChatGPT vs API vs Codex — 무엇을 언제 쓰나
 - 010. Codex란 무엇인가 — AI 코딩 에이전트의 등장
@@ -130,6 +130,7 @@
 - 099. 트러블슈팅 & FAQ
 - 100. 맺음말 — AI 시대의 개발자로 살아가기
 
+
 ---
 
 # 001. 머리말 — 왜 지금 GPT와 Codex인가
@@ -142,7 +143,7 @@
 
 이 변화의 중심에 두 가지가 있습니다.
 
-- GPT-5.5 — OpenAI가 2026년 내놓은 최신 플래그십 모델. 복잡한 코딩, 컴퓨터 사용, 지식 노동, 리서치까지 아우르는 추론 능력을 갖췄습니다.
+- GPT-5.6 — OpenAI가 2026년 7월 내놓은 최신 플래그십 모델 제품군(Sol · Terra · Luna). 복잡한 코딩, 컴퓨터 사용, 지식 노동, 리서치까지 아우르는 추론 능력을 갖췄습니다.
 - Codex — 그 GPT의 두뇌를 당신의 컴퓨터와 터미널, 그리고 클라우드에서 직접 행동하게 만든 코딩 에이전트입니다. 파일을 읽고, 코드를 고치고, 테스트를 돌리고, 커밋까지 합니다.
 
 ## "바이브 코딩"의 시대
@@ -165,7 +166,7 @@
 
 ## 이 책을 읽고 나면
 
-- GPT-5.5와 Codex의 차이와 관계를 명확히 이해합니다.
+- GPT-5.6과 Codex의 차이와 관계를 명확히 이해합니다.
 - Codex를 설치하고 일상 개발에 자연스럽게 녹여 씁니다.
 - 설정·규칙(AGENTS.md)·도구(MCP)·스킬로 에이전트를 내 방식대로 길들입니다.
 - 샌드박스·승인·권한으로 안전하게 자동화합니다.
@@ -251,7 +252,7 @@ print("Hello, Codex")
 
 이 책의 모든 내용은 2026년 6월 기준입니다.
 
-- 모델: GPT-5.5 (플래그십)을 기본으로, 필요 시 `gpt-5.4`·`gpt-5.4-mini`·`gpt-5.3-codex-spark`를 함께 다룹니다.
+- 모델: GPT-5.6 제품군(`gpt-5.6-sol`·`gpt-5.6-terra`·`gpt-5.6-luna`)을 기본으로, 필요 시 `gpt-5.5`·`gpt-5.3-codex-spark`를 함께 다룹니다.
 - 도구: Codex CLI 최신 버전 (Rust 기반, Apache-2.0 오픈소스 코어)
 
 > AI 도구는 빠르게 진화합니다. 명령어나 화면이 책과 조금 다르면, 개념은 그대로 두고 최신 도움말(`codex --help`)을 함께 보세요.
@@ -288,7 +289,7 @@ print("Hello, Codex")
 - ○ 할 일 추가 · 수정 · 완료 · 삭제 (CRUD)
 - 마감일 설정과 정렬
 - 회원가입 / 로그인 (인증)
-- AI 우선순위 추천 — "오늘 뭐부터 할까?"를 GPT-5.5가 제안
+- AI 우선순위 추천 — "오늘 뭐부터 할까?"를 GPT-5.6이 제안
 - 클라우드 배포 + 자동 테스트(CI)
 
 ## 기술 스택 (걱정 마세요, 천천히 갑니다)
@@ -299,7 +300,7 @@ print("Hello, Codex")
 | 프런트엔드 | HTML · CSS · 약간의 JS | 028, 089 |
 | 데이터베이스 | SQLite → PostgreSQL | 090 |
 | 인증 | 토큰 기반 로그인 | 090 |
-| AI 기능 | GPT-5.5 API | 088, 092 |
+| AI 기능 | GPT-5.6 API | 088, 092 |
 | 배포 | Codex Cloud · GitHub Actions | 093 |
 
 지금 이 표가 외계어처럼 보여도 괜찮습니다. Part 1·2를 지나면 자연스럽게 읽히게 됩니다.
@@ -342,8 +343,8 @@ Part 4  ─▶  TaskFlow 완성 → 배포 → 출시
 LLM (거대 언어 모델, Large Language Model)
 대량의 텍스트로 학습해 "다음에 올 말"을 잘 예측하는 AI. GPT가 대표적입니다. 코드도 결국 텍스트라서 LLM이 잘 다룹니다.
 
-GPT-5.5
-2026년 OpenAI의 최신 플래그십 모델. 이 책의 기준 모델입니다.
+GPT-5.6 (Sol · Terra · Luna)
+2026년 7월 공개된 OpenAI의 최신 플래그십 모델 제품군. 이 책의 기준 모델입니다. Sol=최강, Terra=균형, Luna=경제형.
 
 토큰(token)
 AI가 글을 처리하는 최소 단위. 단어보다 작을 수도, 클 수도 있습니다. 영어는 대략 4글자가 1토큰, 한국어는 글자당 더 많은 토큰을 씁니다. 요금과 처리량이 토큰 단위로 계산됩니다.
@@ -352,7 +353,7 @@ AI가 글을 처리하는 최소 단위. 단어보다 작을 수도, 클 수도 
 모델이 한 번에 "기억"할 수 있는 토큰의 양. 대화가 길어지면 이 창을 넘지 않도록 관리해야 합니다(→ 압축, compaction).
 
 추론 강도(reasoning effort)
-모델이 답하기 전에 "얼마나 깊이 생각할지"를 정하는 설정. `low`는 빠르고 저렴, `high`는 느리지만 똑똑합니다. (`minimal`~`xhigh`까지 단계가 있습니다.)
+모델이 답하기 전에 "얼마나 깊이 생각할지"를 정하는 설정. `low`는 빠르고 저렴, `high`는 느리지만 똑똑합니다. (`low`·`medium`·`high`·`xhigh`·`max`·`ultra` 단계가 있고 기본값은 `medium`입니다.)
 
 ## 에이전트 · 도구 관련
 
@@ -435,7 +436,7 @@ def add(a, b):
 - GPT-3 (2020) — "그럴듯한 글"을 쓰기 시작
 - GPT-4 (2023) — 추론·코딩 능력 도약, 실무 투입
 - GPT-5 계열 (2025~2026) — 추론(reasoning) 능력 강화, 도구를 직접 쓰는 에이전트 시대 개막
-- GPT-5.5 (2026) — 이 책의 기준. 복잡한 코딩과 장시간 작업에 최적화
+- GPT-5.6 (2026) — 이 책의 기준. Sol·Terra·Luna 3종 체계로, 복잡한 코딩과 장시간 작업에 최적화
 
 ## "생성형 AI"와 "추론형 AI"
 
@@ -479,66 +480,108 @@ def max_value(a, b):
 
 ---
 
-# 006. GPT-5.5 — 2026년 최신 플래그십 모델
+# 006. GPT-5.6 — 2026년 최신 플래그십 모델
 
-## GPT-5.5는 무엇인가
+## GPT-5.6은 무엇인가
 
-> GPT-5.5는 2026년 OpenAI의 최신 프런티어(최첨단) 모델로, 복잡한 코딩·컴퓨터 사용·지식 노동·리서치 워크플로에 걸쳐 가장 강력한 성능을 냅니다.
+> GPT-5.6은 2026년 7월 OpenAI가 공개한 최신 프런티어(최첨단) 모델 제품군으로, **Sol · Terra · Luna** 세 가지로 나뉩니다. 하나의 이름이 아니라 "세 자매"라는 점이 이전 세대와 가장 다른 점입니다.
 
-Codex에서 복잡한 작업을 맡길 때 권장되는 기본 모델이 바로 GPT-5.5입니다. ChatGPT 로그인 또는 API 키로 사용할 수 있습니다.
+2026년 6월 26일 제한 프리뷰로 먼저 공개됐고, 7월 9일 정식 출시됐습니다. Codex에서도 같은 시점부터 세 모델을 모두 고를 수 있습니다. ChatGPT 로그인 또는 API 키로 사용합니다.
+
+| 모델 | 모델 ID | 공식 소개 |
+|---|---|---|
+| GPT-5.6 Sol | `gpt-5.6-sol` | 복잡한 코딩·컴퓨터 사용·리서치·사이버보안에서 가장 강력한 플래그십 |
+| GPT-5.6 Terra | `gpt-5.6-terra` | 일상 업무용 균형 모델. GPT-5.5에 필적하는 성능을 더 낮은 비용으로 |
+| GPT-5.6 Luna | `gpt-5.6-luna` | 빠르고 저렴한 모델. 제품군 중 최저 비용으로 충분한 성능 |
 
 ## 무엇이 강해졌나
-
-GPT-5.5가 이전 세대보다 두드러지는 부분은 다음과 같습니다.
 
 1. 깊은 추론 — 여러 단계를 거쳐야 하는 문제(설계 → 구현 → 검증)를 끝까지 끌고 갑니다.
 2. 장시간 자율 작업 — 한 번 시킨 작업을 여러 턴에 걸쳐 스스로 이어 갑니다(→ Goal 모드, 044번).
 3. 도구 사용(tool use) — 터미널·파일·웹 검색·MCP 도구를 능숙하게 조합합니다.
 4. 컴퓨터 사용(computer use) — 화면을 보고 조작하는 작업까지 다룹니다.
+5. **토큰 효율** — 같은 작업을 더 적은 토큰으로 끝냅니다. OpenAI는 코딩 작업 기준 Sol이 이전 세대보다 54% 더 토큰 효율적이라고 밝혔습니다.
+6. **보안 역량** — Sol은 OpenAI가 "가장 강력한 사이버보안 모델"로 소개한 모델로, 위협 모델링·코드 리뷰·패치·블루팀 작업을 지원합니다.
 
-## 언제 GPT-5.5를 쓰나
+> 참고 독립 평가기관 Artificial Analysis의 Coding Agent Index v1.1에서 Sol(최고 추론)은 80점을 기록해 당시 1위였습니다. 벤치마크 수치는 버전마다 바뀌니 절대값보다 "세대가 한 단계 올라갔다"는 흐름만 기억하세요.
+
+## 공통 스펙
+
+| 항목 | 값 |
+|---|---|
+| 컨텍스트 윈도우 | 1,050,000 토큰 (약 1.05M) |
+| 최대 출력 | 128,000 토큰 |
+| 지식 컷오프 | 2026년 2월 16일 |
+| 추론 강도 | `low` · `medium`(기본) · `high` · `xhigh` · `max` · `ultra` |
+
+세 모델 모두 컨텍스트·출력 한도가 같습니다. 즉 **"얼마나 많이 담느냐"가 아니라 "얼마나 똑똑하고 얼마나 비싸냐"로 갈리는 라인업**입니다.
+
+> `max`·`ultra`는 GPT-5.6에서 새로 생긴 상위 추론 단계입니다. 모델·요금제에 따라 노출 여부가 다르니 `/model` 화면에서 실제로 보이는 항목을 기준으로 쓰세요. (추론 강도는 008번, 설정은 033번)
+
+## 언제 어떤 모델을 쓰나
 
 | 상황 | 추천 |
 |---|---|
-| 복잡한 기능 구현, 아키텍처 설계 | ○ GPT-5.5 |
-| 버그 추적, 보안 리뷰 | ○ GPT-5.5 (추론 강도 high) |
-| 단순 반복, 빠른 수정 | gpt-5.4-mini가 더 경제적 |
-| 실시간 즉답 코딩 | gpt-5.3-codex-spark (Pro 전용) |
+| 복잡한 기능 구현, 아키텍처 설계 | ○ Sol |
+| 버그 추적, 보안 리뷰 | ○ Sol (추론 강도 `high` 이상) |
+| 일상적인 기능 구현·수정 | ○ Terra (대부분의 작업) |
+| 대량 스캔, 추출·분류·변환 | ○ Luna |
+| 실시간 즉답 코딩 | `gpt-5.3-codex-spark` (Pro 전용 프리뷰) |
 
-> 다른 모델들과의 비교는 다음 절(007)에서 자세히 다룹니다.
+> 다른 모델들과의 비교와 선택 기준은 다음 절(007)에서 표로 정리합니다.
 
-## "Codex" 변형 모델 이야기
+## 이전 세대는 어떻게 되나
 
-OpenAI는 일반 모델 외에, 소프트웨어 엔지니어링에 특화 튜닝한 Codex 계열 모델도 함께 제공해 왔습니다(예: 과거의 `codex-1`). 이들은 코드 편집·도구 호출 같은 에이전트 작업에 맞춰 다듬어졌습니다. 2026년 현재 권장 라인업은 GPT-5.5를 정점으로 정리되어 있으며, 구형인 `gpt-5.2`·`gpt-5.3-codex` 등은 사용 중단(deprecated) 되었으니 새 작업에는 최신 모델을 쓰세요.
+- `gpt-5.5` — 이전 세대 프런티어 모델. 여전히 고를 수 있지만, 새 작업은 Sol을 권장합니다.
+- `gpt-5.4` / `gpt-5.4-mini` — **2026년 8월 31일자로 Codex에서 제공 종료**. `gpt-5.4` → `gpt-5.6-terra`, `gpt-5.4-mini` → `gpt-5.6-luna`로 바꾸세요. 워크스페이스 기본값, 저장된 모델 설정, 관리형 설정, 커스텀 에이전트, 예약 작업까지 모두 확인해야 합니다.
+- `gpt-5.2`, `gpt-5.3-codex` — 사용 중단(deprecated).
+
+> Codex CLI 0.145.0(2026-07-21)부터는 내부에 박혀 있던 GPT-5.4 선택값이 Terra/Luna로 자동 이관됐습니다. 그래도 **내 `config.toml`에 직접 적어 둔 모델명은 자동으로 바뀌지 않습니다.** 직접 고치세요(→ 033번).
 
 ## 요금과 토큰 감각
 
+API 기준 100만 토큰당 단가입니다(입력 272K 토큰 이하 구간, 2026년 8월 기준).
+
+| 모델 | 입력 | 캐시된 입력 | 출력 |
+|---|---|---|---|
+| `gpt-5.6-sol` | $5.00 | $0.50 | $30.00 |
+| `gpt-5.6-terra` | $2.00 | $0.20 | $12.00 |
+| `gpt-5.6-luna` | $0.20 | $0.02 | $1.20 |
+
+- 입력이 272K 토큰을 넘으면 장문 구간 단가(대략 2배 입력 / 1.5배 출력)가 적용됩니다.
+- 배치(Batch) API를 쓰면 절반 가격입니다.
+- **캐시된 입력은 1/10 가격** — 같은 컨텍스트를 반복해 보내는 에이전트 작업에서 실제 청구액을 크게 낮춰 줍니다.
+
 정확한 단가는 시기에 따라 바뀌므로 공식 가격표를 확인해야 합니다. 다만 감각은 갖고 가세요.
 
-- 더 똑똑한 모델 = 토큰당 비용 ↑
+- 더 똑똑한 모델 = 토큰당 비용 ↑ (Sol은 Luna의 25배)
 - 추론 강도가 높을수록 = 생각하는 토큰(요금) ↑
 - 컨텍스트가 길수록 = 입력 토큰 ↑
 
-> TIP 처음엔 GPT-5.5로 작업의 "설계"를 시키고, 단순 반복 부분은 mini로 내려서 돌리면 품질과 비용을 동시에 잡을 수 있습니다(→ 071 서브에이전트에서 이 전략을 본격적으로 다룹니다).
+> TIP 처음엔 Sol로 작업의 "설계"를 시키고, 단순 반복 부분은 Luna로 내려서 돌리면 품질과 비용을 동시에 잡을 수 있습니다(→ 071 서브에이전트에서 이 전략을 본격적으로 다룹니다).
 
 ## 정리
 
-- GPT-5.5 = 2026년 가장 강력한 범용/코딩 모델, Codex의 권장 기본값
-- 복잡·장시간·도구 사용 작업에 강함
+- GPT-5.6 = 2026년 최신 세대, **Sol(최강) / Terra(균형) / Luna(경제형)** 3종
+- 컨텍스트 1.05M · 출력 128K는 셋이 동일, 차이는 지능과 가격
+- `gpt-5.4`·`gpt-5.4-mini`는 2026-08-31 종료 → Terra·Luna로 이전
 - 비용은 "똑똑함 × 생각의 깊이 × 입력 길이"에 비례한다고 기억
 
 ## 자주 묻는 질문
 
-Q. 꼭 GPT-5.5만 써야 하나요?
-A. 아닙니다. 간단한 수정이나 대량 파일 훑기 같은 일은 더 가볍고 빠른 모델이 비용 대비 효율이 좋습니다. 어려운 설계나 까다로운 디버깅처럼 깊은 추론이 필요할 때 GPT-5.5를 쓰는 식으로 작업에 맞춰 고르면 됩니다. 자세한 기준은 다음 절에서 다룹니다.
+Q. 꼭 Sol만 써야 하나요?
+A. 아닙니다. 오히려 **일상 작업의 기본값은 Terra**입니다. 간단한 수정이나 대량 파일 훑기는 Luna가 비용 대비 효율이 훨씬 좋습니다. 어려운 설계나 까다로운 디버깅처럼 깊은 추론이 필요할 때 Sol을 꺼내 쓰세요. 자세한 기준은 다음 절에서 다룹니다.
+
+Q. 이름이 왜 숫자가 아니라 Sol·Terra·Luna인가요?
+A. 같은 GPT-5.6 세대 안에서 "성능/비용 등급"을 구분하는 이름입니다. 예전의 5.5 → 5.4 → 5.4-mini 계단이 하나의 세대 안으로 들어왔다고 보면 됩니다. 덕분에 셋 다 같은 지식 컷오프와 같은 컨텍스트 크기를 공유합니다.
 
 Q. 모델이 바뀌면 이 책 내용이 쓸모없어지나요?
-A. 모델 이름과 숫자는 계속 바뀌지만, 이 책이 가르치는 핵심(어떻게 요청하고, 검증하고, 통제하는가)은 모델이 바뀌어도 그대로 통합니다. 새 모델이 나오면 이름만 바꿔 적용하면 됩니다.
+A. 모델 이름과 숫자는 계속 바뀌지만, 이 책이 가르치는 핵심(어떻게 요청하고, 검증하고, 통제하는가)은 모델이 바뀌어도 그대로 통합니다. 새 모델이 나오면 이름만 바꿔 적용하면 됩니다. 실제로 이 책도 GPT-5.5 기준에서 GPT-5.6 기준으로 갱신됐지만, 바뀐 건 모델 이름과 표뿐입니다.
 
-Q. GPT-5.5는 인터넷의 최신 정보를 다 아나요?
-A. 학습 시점까지의 지식을 갖고 있고, 그 이후 정보는 모를 수 있습니다. 그래서 최신 라이브러리 사용법 같은 건 웹 검색이나 외부 도구로 보완합니다. 이 방법은 중급편에서 다룹니다.
+Q. GPT-5.6은 인터넷의 최신 정보를 다 아나요?
+A. 학습 시점(2026년 2월 16일)까지의 지식을 갖고 있고, 그 이후 정보는 모를 수 있습니다. 그래서 최신 라이브러리 사용법 같은 건 웹 검색이나 외부 도구로 보완합니다. 이 방법은 중급편에서 다룹니다.
 
-다음 절에서는 GPT-5.5를 포함한 전체 모델 라인업과 고르는 기준을 표로 정리합니다.
+다음 절에서는 GPT-5.6을 포함한 전체 모델 라인업과 고르는 기준을 표로 정리합니다.
 
 ---
 
@@ -549,18 +592,19 @@ A. 학습 시점까지의 지식을 갖고 있고, 그 이후 정보는 모를 �
 
 # 007. 모델 라인업과 선택 기준
 
-## 2026년 6월 기준 라인업
+## 2026년 8월 기준 라인업
 
 Codex에서 고를 수 있는 주요 모델은 다음과 같습니다.
 
 | 모델 | 성격 | 추천 용도 | 비용/속도 |
 |---|---|---|---|
-| gpt-5.5 | 플래그십, 최강 추론 | 복잡한 코딩, 설계, 리서치 | 비싸고 느림(깊음) |
-| gpt-5.4 | 주력 프런티어, 전 플랫폼 호환 | 일상적인 전문 작업 | 균형 |
-| gpt-5.4-mini | 경량·고속 | 대용량 스캔, 단순 작업, 서브에이전트 | 싸고 빠름 |
+| gpt-5.6-sol | 플래그십, 최강 추론 | 복잡한 코딩, 설계, 리서치, 보안 | 비싸고 느림(깊음) |
+| gpt-5.6-terra | 균형형 주력 | 일상적인 전문 작업 대부분 | 균형 (Sol의 약 1/2.5) |
+| gpt-5.6-luna | 경량·고속 | 대용량 스캔, 추출·분류, 서브에이전트 | 싸고 빠름 (Sol의 1/25) |
+| gpt-5.5 | 이전 세대 프런티어 | 기존 워크플로 호환 | Sol과 비슷 |
 | gpt-5.3-codex-spark | 실시간 프리뷰(텍스트 전용) | 즉각적인 코딩 반복(ChatGPT Pro 전용) | 매우 빠름 |
 
-> `gpt-5.2`, `gpt-5.3-codex` 같은 구형은 deprecated 입니다. 새 프로젝트엔 위 표의 모델을 쓰세요.
+> `gpt-5.4`·`gpt-5.4-mini`는 **2026년 8월 31일 Codex에서 제공 종료**입니다. `gpt-5.4` → `gpt-5.6-terra`, `gpt-5.4-mini` → `gpt-5.6-luna`로 바꾸세요. `gpt-5.2`, `gpt-5.3-codex` 같은 구형은 이미 deprecated 입니다.
 
 ## 고르는 3가지 기준
 
@@ -570,10 +614,16 @@ Codex에서 고를 수 있는 주요 모델은 다음과 같습니다.
    똑똑함(품질)  ⟷  속도  ⟷  비용
 ```
 
-- 품질이 최우선 (아키텍처 설계, 까다로운 버그) → `gpt-5.5`
-- 균형 (대부분의 일상 작업) → `gpt-5.4`
-- 속도·비용 우선 (반복 수정, 파일 훑기) → `gpt-5.4-mini`
+- 품질이 최우선 (아키텍처 설계, 까다로운 버그, 보안 리뷰) → `gpt-5.6-sol`
+- 균형 (대부분의 일상 작업) → `gpt-5.6-terra`  ← **기본으로 삼을 값**
+- 속도·비용 우선 (반복 수정, 파일 훑기, 분류·추출) → `gpt-5.6-luna`
 - 즉답 페어코딩 → `gpt-5.3-codex-spark`
+
+공식 문서의 표현을 빌리면 이렇습니다.
+
+- **Sol** — 모호하거나 어렵거나 가치가 큰 작업. 추가 분석·판단·마무리 품질이 필요한 일.
+- **Terra** — 강한 추론과 도구 사용이 필요하지만 Sol만큼 깊이가 필요하진 않은 일상 작업.
+- **Luna** — 좋은 결과의 모습이 이미 정해져 있는 대량 반복 작업(추출, 분류, 변환, 구조화 요약).
 
 ## 실전 선택 가이드
 
@@ -583,14 +633,16 @@ Codex에서 고를 수 있는 주요 모델은 다음과 같습니다.
 2. "결제 모듈을 새로 설계하고 구현해줘"
 3. "변수명 오타 하나 고쳐줘"
 4. "방금 친 코드 바로 이어서 자동완성처럼 도와줘"
+5. "이 API 라우트에 페이지네이션 붙여줘"
 
 <details>
 <summary>정답 보기</summary>
 
-1. `gpt-5.4-mini` (대량 스캔, 단순 추출)
-2. `gpt-5.5` (복잡한 설계+구현)
-3. `gpt-5.4-mini` (사소한 수정)
+1. `gpt-5.6-luna` (대량 스캔, 단순 추출)
+2. `gpt-5.6-sol` (복잡한 설계+구현)
+3. `gpt-5.6-luna` (사소한 수정)
 4. `gpt-5.3-codex-spark` (실시간 반복)
+5. `gpt-5.6-terra` (전형적인 일상 작업)
 
 </details>
 
@@ -603,27 +655,29 @@ Codex에서 고를 수 있는 주요 모델은 다음과 같습니다.
 /model
 
 # 2) 실행할 때 플래그로
-codex --model gpt-5.5
+codex --model gpt-5.6-sol
+codex exec -m gpt-5.6-terra "지금 변경사항을 리뷰해줘"
 
 # 3) 설정 파일 config.toml 에 기본값으로
-#    model = "gpt-5.5"
+#    model = "gpt-5.6-terra"
 ```
 
 ## "추론 강도"도 함께 고른다
 
-같은 모델이라도 얼마나 깊이 생각할지를 따로 정할 수 있습니다.
+같은 모델이라도 얼마나 깊이 생각할지를 따로 정할 수 있습니다. GPT-5.6에서는 단계가 위로 두 칸 늘었습니다.
 
 - `low` — 빠르고 저렴 (단순 작업)
 - `medium` — 기본 균형
 - `high` — 깊은 추론 (보안 리뷰, 복잡한 로직 추적)
-- (`minimal` ~ `xhigh` 까지 세분화)
+- `xhigh` · `max` · `ultra` — 더 깊게. 어렵고 모호한 문제용 (모델·요금제에 따라 제공)
 
-> TIP "비싼 모델 + 낮은 추론"보다 "적당한 모델 + 높은 추론"이 나은 경우가 많습니다. 모델과 추론 강도는 함께 튜닝하세요. 자세한 건 008번에서.
+> TIP "비싼 모델 + 낮은 추론"보다 "적당한 모델 + 높은 추론"이 나은 경우가 많습니다. 실제로 **Terra + `high`** 조합이 Sol + `medium`보다 싸고 좋은 경우가 흔합니다. 모델과 추론 강도는 함께 튜닝하세요. 자세한 건 008번에서.
 
 ## 정리
 
 - 한 가지 모델만 고집하지 말고 작업에 맞춰 갈아타세요.
-- 기본은 `gpt-5.5`, 비용·속도가 중요하면 `gpt-5.4-mini`.
+- 기본은 `gpt-5.6-terra`, 어려우면 `gpt-5.6-sol`, 비용·속도가 중요하면 `gpt-5.6-luna`.
+- `gpt-5.4` 계열을 쓰고 있었다면 8월 31일 전에 반드시 이전하세요.
 - 모델 × 추론 강도 = 진짜 성능 다이얼.
 
 
@@ -653,6 +707,8 @@ AI는 글자를 그대로 보지 않고, 토큰이라는 조각으로 잘라서 
 
 모델이 한 번에 들고 있을 수 있는 토큰의 총량입니다. 일종의 "작업 기억(working memory)"이죠.
 
+GPT-5.6 세 모델(Sol·Terra·Luna)은 모두 **1,050,000토큰**(약 1.05M)을 담을 수 있고, 한 번에 내보낼 수 있는 출력은 **128,000토큰**입니다. 넉넉해 보이지만 착각하면 안 됩니다 — 담을 수 있다고 다 담는 게 좋은 건 아닙니다. 입력이 272K 토큰을 넘어가면 단가 자체가 장문 구간으로 올라가고(대략 입력 2배·출력 1.5배), 무엇보다 쓸데없는 내용이 많을수록 모델의 집중도가 떨어집니다.
+
 ```text
 [ 시스템 지침 ] + [ AGENTS.md ] + [ 대화 기록 ] + [ 첨부 파일 ] + [ 도구 출력 ]
 └──────────────── 이 모든 게 컨텍스트 윈도우 안에 들어가야 함 ────────────────┘
@@ -670,11 +726,16 @@ AI는 글자를 그대로 보지 않고, 토큰이라는 조각으로 잘라서 
 
 | 강도 | 특징 | 적합한 작업 |
 |---|---|---|
-| `minimal` / `low` | 빠르고 저렴, 생각 적음 | 단순 수정, 포맷팅 |
-| `medium` | 기본 균형 | 대부분의 일상 작업 |
-| `high` / `xhigh` | 느리지만 깊음 | 보안 리뷰, 복잡한 버그 추적, 설계 |
+| `low` | 빠르고 저렴, 생각 적음 | 단순 수정, 포맷팅 |
+| `medium` (기본) | 기본 균형 | 대부분의 일상 작업 |
+| `high` | 느리지만 깊음 | 보안 리뷰, 복잡한 버그 추적, 설계 |
+| `xhigh` / `max` / `ultra` | 가장 깊게 생각함 | 모호하고 어려운 문제, 대규모 리팩터링 |
+
+`max`·`ultra`는 GPT-5.6에서 새로 생긴 상위 단계입니다. 모델과 요금제에 따라 노출 여부가 다르니 `/model` 화면에 실제로 보이는 항목을 기준으로 쓰세요. (구형 모델에서는 `minimal` 단계를 쓰기도 합니다.)
 
 생각하는 과정도 토큰을 씁니다. 즉 추론 강도 ↑ = 비용·시간 ↑ = 품질 ↑.
+
+> 기본값은 `medium`입니다. **먼저 기본으로 돌려 보고, 결과가 얕다고 느낄 때 한 칸씩 올리는 것**이 공식 문서의 권장 방식입니다. 처음부터 `ultra`로 시작하지 마세요.
 
 ## 셋을 함께 보는 감각
 
@@ -711,7 +772,7 @@ AI는 글자를 그대로 보지 않고, 토큰이라는 조각으로 잘라서 
 
 # 009. ChatGPT vs API vs Codex — 무엇을 언제 쓰나
 
-같은 GPT-5.5라도 어디서 만나느냐에 따라 쓰임새가 다릅니다. 초보자가 가장 헷갈리는 지점이니 확실히 정리합시다.
+같은 GPT-5.6이라도 어디서 만나느냐에 따라 쓰임새가 다릅니다. 초보자가 가장 헷갈리는 지점이니 확실히 정리합시다.
 
 ## 세 가지 접점
 
@@ -856,7 +917,7 @@ flowchart TB
     Cloud["Cloud 클라우드"] --- Brain
 ```
 
-Codex는 하나가 아닙니다. 같은 두뇌(GPT-5.5)를 네 가지 몸으로 만날 수 있습니다. 상황에 맞게 고르면 됩니다.
+Codex는 하나가 아닙니다. 같은 두뇌(GPT-5.6)를 네 가지 몸으로 만날 수 있습니다. 상황에 맞게 고르면 됩니다.
 
 ## 1) CLI — 터미널의 Codex
 
@@ -1291,7 +1352,7 @@ Codex를 실행하면 나오는 터미널 화면을 TUI(Text User Interface)라�
 
 상태 줄에는 보통 이런 정보가 보입니다.
 
-- 현재 모델 (예: `gpt-5.5`) — `/model`로 변경 가능(→ 033번)
+- 현재 모델 (예: `gpt-5.6-terra`) — `/model`로 변경 가능(→ 033번)
 - 토큰 사용량 / 컨텍스트 잔여 — 가득 차기 전에 `/compact`(→ 021번)
 - 작업 폴더(cwd) — Codex가 작업하는 위치
 
@@ -1803,7 +1864,7 @@ codex resume
 ```text
 /model
 ```
-작업에 맞춰 GPT-5.5 / 5.4 / mini 등으로 전환 (→ 007, 033번).
+작업에 맞춰 Sol / Terra / Luna 등으로 전환 (→ 007, 033번).
 
 ### 2. `/status` — 현재 상태
 모델, 토큰 사용량, 작업 폴더 등을 확인.
@@ -2543,7 +2604,7 @@ A. 배포는 Part 4(093번)에서 다룹니다. 지금은 로컬에서 보는 �
 ## 지금까지 배운 것
 
 GPT·Codex 이해
-- GPT는 "다음 말 예측" AI, GPT-5.5는 2026년 플래그십 (005~007)
+- GPT는 "다음 말 예측" AI, GPT-5.6(Sol·Terra·Luna)은 2026년 플래그십 (005~007)
 - 토큰·컨텍스트·추론 강도의 개념 (008)
 - ChatGPT·API·Codex의 역할 차이 (009)
 - Codex = 읽고·고치고·실행하는 에이전트, 네 가지 형태 (010~011)
@@ -2619,7 +2680,7 @@ Codex의 동작을 정의하는 설정 파일입니다. 모델, 승인 정책, �
 
 ```toml
 # 가장 단순한 예
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 ```
 
@@ -2640,7 +2701,7 @@ model_reasoning_effort = "medium"
 
 ```text
 ~/.codex/config.toml 파일을 열어서 현재 설정을 보여줘.
-없으면 기본 모델을 gpt-5.5로 설정하는 파일을 만들어줘.
+없으면 기본 모델을 gpt-5.6-terra로 설정하는 파일을 만들어줘.
 ```
 
 또는 직접:
@@ -2655,7 +2716,7 @@ mkdir -p ~/.codex
 
 ```toml
 # 모델과 추론 강도
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 
 # 샌드박스 모드 (안전) — 038번
@@ -2691,7 +2752,7 @@ memories = true
 ## 실습
 
 ```text
-~/.codex/config.toml 에 기본 모델을 gpt-5.5,
+~/.codex/config.toml 에 기본 모델을 gpt-5.6-terra,
 추론 강도를 medium으로 설정해줘. 그리고 적용됐는지 /status로 보여줘.
 ```
 
@@ -2800,24 +2861,27 @@ memories = true
 
 2) 실행 시 — `--model` 플래그
 ```bash
-codex --model gpt-5.5
-codex --model gpt-5.4-mini
+codex --model gpt-5.6-sol
+codex --model gpt-5.6-luna
+codex exec -m gpt-5.6-terra "지금 변경사항을 리뷰해줘"
 ```
 이 세션에만 적용됩니다.
 
 3) 기본값 — `config.toml`
 ```toml
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 ```
 앞으로 모든 세션의 기본이 됩니다.
 
 ## 추론 강도 설정
 
 ```toml
-model_reasoning_effort = "high"   # minimal | low | medium | high | xhigh
+model_reasoning_effort = "high"   # low | medium | high | xhigh | max | ultra
 ```
 
-또는 실행 중에 바꿀 수도 있습니다(환경에 따라 슬래시/설정으로). 강도가 높을수록 깊게 생각하고, 그만큼 느리고 비쌉니다(→ 008번).
+또는 `/model` 화면에서 모델과 함께 그 자리에서 바꿀 수도 있습니다. 강도가 높을수록 깊게 생각하고, 그만큼 느리고 비쌉니다(→ 008번).
+
+> `max`·`ultra`는 GPT-5.6에서 추가된 상위 단계이고, 모델·요금제에 따라 쓸 수 있는 범위가 다릅니다. 구형 모델용 `minimal` 값도 설정 파일에서는 여전히 받아들여집니다.
 
 ## 실전 조합 레시피
 
@@ -2825,11 +2889,12 @@ model_reasoning_effort = "high"   # minimal | low | medium | high | xhigh
 
 | 작업 | 모델 | 추론 강도 |
 |---|---|---|
-| 아키텍처 설계, 까다로운 버그 | `gpt-5.5` | `high` / `xhigh` |
-| 일반 기능 구현 | `gpt-5.5` 또는 `gpt-5.4` | `medium` |
-| 대량 파일 스캔, 단순 추출 | `gpt-5.4-mini` | `low` |
-| 사소한 수정 (오타 등) | `gpt-5.4-mini` | `minimal` |
-| 보안 리뷰 | `gpt-5.5` | `high` |
+| 아키텍처 설계, 까다로운 버그 | `gpt-5.6-sol` | `high` / `xhigh` |
+| 모호하고 어려운 문제, 대규모 리팩터링 | `gpt-5.6-sol` | `max` / `ultra` |
+| 일반 기능 구현 | `gpt-5.6-terra` | `medium` |
+| 대량 파일 스캔, 단순 추출 | `gpt-5.6-luna` | `low` |
+| 사소한 수정 (오타 등) | `gpt-5.6-luna` | `low` |
+| 보안 리뷰 | `gpt-5.6-sol` | `high` |
 
 > TIP 비용·속도가 답답하면 모델을 내리기 전에 추론 강도를 먼저 조절해 보세요. 같은 모델이라도 체감이 크게 달라집니다.
 
@@ -2838,9 +2903,9 @@ model_reasoning_effort = "high"   # minimal | low | medium | high | xhigh
 실전에서는 한 작업 안에서도 모델을 바꿉니다.
 
 ```text
-1. /model 로 gpt-5.5 선택
+1. /model 로 gpt-5.6-sol 선택
    → "결제 모듈 전체 구조를 설계해줘" (어려운 설계)
-2. /model 로 gpt-5.4-mini 선택
+2. /model 로 gpt-5.6-luna 선택
    → "위 설계대로 반복되는 CRUD 코드를 채워줘" (단순 반복)
 ```
 
@@ -2852,7 +2917,7 @@ model_reasoning_effort = "high"   # minimal | low | medium | high | xhigh
 
 ```toml
 # 보통은 건드릴 필요 없음
-model_context_window = 200000   # 예시
+model_context_window = 200000   # 예시 (GPT-5.6 실제 한도는 1,050,000)
 ```
 
 대부분은 기본값을 그대로 쓰면 됩니다.
@@ -2860,9 +2925,9 @@ model_context_window = 200000   # 예시
 ## 실습
 
 ```text
-1. /model 로 gpt-5.4-mini 선택
+1. /model 로 gpt-5.6-luna 선택
 2. "이 폴더의 모든 .py 파일 목록과 각 파일의 줄 수를 알려줘" (단순 작업)
-3. /model 로 gpt-5.5 선택
+3. /model 로 gpt-5.6-sol 선택
 4. "이 프로젝트 구조를 개선할 방법을 제안해줘" (사고가 필요한 작업)
 ```
 
@@ -2871,7 +2936,7 @@ model_context_window = 200000   # 예시
 ## 정리
 
 - 모델 변경: `/model`(즉시) · `--model`(세션) · `config.toml`(기본값)
-- 추론 강도: `model_reasoning_effort` (`minimal`~`xhigh`)
+- 추론 강도: `model_reasoning_effort` (`low`~`ultra`, 기본 `medium`)
 - 작업별로 모델 × 강도를 조합하라
 - "비싼 모델로 설계, 싼 모델로 반복" 전략
 
@@ -5370,7 +5435,7 @@ git commit -m "Add in-memory Todo CRUD API with tests"
 
 ## 실수 9. 모델을 한 가지만 고집
 
-증상: 모든 작업을 gpt-5.5(또는 mini)로만.
+증상: 모든 작업을 gpt-5.6-sol(또는 luna)로만.
 문제: 비용 낭비 or 품질 부족.
 해결: 작업별로 모델×추론강도 조합(033번).
 
@@ -5533,7 +5598,7 @@ docs/            ← 문서
    [사용자/UI]
        │  프롬프트
        ▼
-   [Codex 엔진(core)]  ── 모델 API(WebSocket) ──▶ [GPT-5.5]
+   [Codex 엔진(core)]  ── 모델 API(WebSocket) ──▶ [GPT-5.6]
        │  도구 호출(파일/명령/MCP)
        ▼
    [샌드박스 + execpolicy + 승인]  ← 안전 계층
@@ -5779,7 +5844,7 @@ Turn 3: (할 일 없음) → Task 종료
 
 # 064. 모델 통신 — WebSocket Responses API
 
-Codex 엔진이 GPT-5.5와 실제로 어떻게 대화하는지 봅니다. 여기엔 성능을 위한 영리한 설계가 숨어 있습니다.
+Codex 엔진이 GPT-5.6과 실제로 어떻게 대화하는지 봅니다. 여기엔 성능을 위한 영리한 설계가 숨어 있습니다.
 
 ## Responses API
 
@@ -5838,7 +5903,7 @@ Codex는 모델과 OpenAI의 Responses API로 통신합니다. 일반적인 단�
 ## 모델·통신 관련 설정 (참고)
 
 ```toml
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_provider = "openai"      # 제공자 (커스텀 가능)
 # 스트림 idle 타임아웃 등 고급 설정도 존재
 ```
@@ -6489,11 +6554,11 @@ codex sandbox ...  # 샌드박스 관련 기능
 
 | 서브에이전트 역할 | 추천 |
 |---|---|
-| 복잡한 추론·검증 | `gpt-5.5`, 추론 `high` |
-| 대용량 파일 스캔·탐색 | `gpt-5.4-mini`, 추론 `low` |
-| 범용 작업 | `gpt-5.4`, 추론 `medium` |
+| 복잡한 추론·검증 | `gpt-5.6-sol`, 추론 `high` |
+| 대용량 파일 스캔·탐색 | `gpt-5.6-luna`, 추론 `low` |
+| 범용 작업 | `gpt-5.6-terra`, 추론 `medium` |
 
-> 비싼 모델로 지휘, 싼 모델로 잡일 — 메인은 gpt-5.5, 탐색 서브는 mini로 두면 품질과 비용을 동시에 잡습니다.
+> 비싼 모델로 지휘, 싼 모델로 잡일 — 메인은 gpt-5.6-sol, 탐색 서브는 gpt-5.6-luna로 두면 품질과 비용을 동시에 잡습니다. 단가 차이가 25배라 체감이 큽니다.
 
 ## 빌트인 역할들
 
@@ -6518,7 +6583,7 @@ multi_agent = true
 - 서브에이전트 = 병렬 보조 에이전트, 잡일을 빼고 요약만 회수(context rot 방지)
 - read-heavy(탐색·테스트·요약)에 적합, 병렬 쓰기는 충돌 주의
 - 자동 아님 — 명시적으로 "띄워줘" 지시, 토큰 비용 ↑
-- 역할별 모델 배분("지휘는 5.5, 잡일은 mini"), `multi_agent` 토글
+- 역할별 모델 배분("지휘는 Sol, 잡일은 Luna"), `multi_agent` 토글
 
 ---
 
@@ -6580,8 +6645,8 @@ codex
 비용을 의식한 배분을 시도해 봅니다.
 
 ```text
-탐색용 서브에이전트들은 gpt-5.4-mini로 빠르게 돌리고,
-최종 종합과 판단은 gpt-5.5로 해줘.
+탐색용 서브에이전트들은 gpt-5.6-luna로 빠르게 돌리고,
+최종 종합과 판단은 gpt-5.6-sol로 해줘.
 ```
 
 "잡일은 싼 모델, 판단은 비싼 모델" 전략을 체감하세요.
@@ -7155,7 +7220,7 @@ pip install openai-codex
 from openai_codex import Codex
 
 with Codex() as codex:
-    thread = codex.thread_start(model="gpt-5.5")
+    thread = codex.thread_start(model="gpt-5.6-sol")
     result = thread.run("이 폴더의 테스트를 실행하고 결과를 요약해줘")
     print(result.final_response)
 ```
@@ -7166,7 +7231,7 @@ with Codex() as codex:
 
 ```python
 with Codex() as codex:
-    thread = codex.thread_start(model="gpt-5.5")
+    thread = codex.thread_start(model="gpt-5.6-sol")
     thread.run("todo_api.py에 검색 기능을 추가해줘")
     thread.run("방금 기능의 테스트도 작성하고 실행해줘")  # 맥락 유지
 ```
@@ -7181,7 +7246,7 @@ from openai_codex import AsyncCodex
 
 async def main():
     async with AsyncCodex() as codex:
-        thread = codex.thread_start(model="gpt-5.4-mini")
+        thread = codex.thread_start(model="gpt-5.6-luna")
         result = await thread.run("README를 한 문단으로 요약해줘")
         print(result.final_response)
 
@@ -7195,7 +7260,7 @@ from openai_codex import Codex, Sandbox
 
 with Codex() as codex:
     thread = codex.thread_start(
-        model="gpt-5.5",
+        model="gpt-5.6-sol",
         # 샌드박스 수준 (개념): read_only | workspace_write | full_access
     )
 ```
@@ -7211,7 +7276,7 @@ REPOS = ["service-a", "service-b", "service-c"]
 
 def audit(repo: str) -> str:
     with Codex() as codex:
-        thread = codex.thread_start(model="gpt-5.4")
+        thread = codex.thread_start(model="gpt-5.6-terra")
         r = thread.run(
             "보안상 위험한 패턴(하드코딩된 비밀키 등)이 있는지 점검하고 "
             "발견 사항을 목록으로 요약해줘."
@@ -7305,7 +7370,7 @@ def main():
         print("리뷰할 변경 없음")
         return
     with Codex() as codex:
-        thread = codex.thread_start(model="gpt-5.5")
+        thread = codex.thread_start(model="gpt-5.6-sol")
         r = thread.run(
             "다음 git diff를 리뷰해줘. 버그와 보안 위험을 심각도 순으로, "
             "각 항목에 파일/라인과 한 줄 설명. 심각한 문제가 있으면 "
@@ -7344,7 +7409,7 @@ python review_bot.py
 
 ```text
 review_bot.py 를 개선해줘:
-- 모델을 환경변수로 선택 가능하게(기본 gpt-5.5)
+- 모델을 환경변수로 선택 가능하게(기본 gpt-5.6-terra)
 - 리뷰 결과를 review_report.md 로도 저장
 - 변경 파일이 너무 많으면 경고
 ```
@@ -7994,7 +8059,7 @@ Part 4, 실전 프로젝트에 오신 걸 환영합니다. 지금부터 배운 �
 [브라우저]
    │  HTTP
    ▼
-[FastAPI 백엔드] ── [AI 모듈(GPT-5.5 API)]  ← 우선순위 추천
+[FastAPI 백엔드] ── [AI 모듈(GPT-5.6 API)]  ← 우선순위 추천
    │
    ▼
 [데이터베이스] SQLite(개발) → PostgreSQL(운영)
@@ -8008,7 +8073,7 @@ Part 4, 실전 프로젝트에 오신 걸 환영합니다. 지금부터 배운 �
 | 프런트엔드 | HTML · CSS · JS |
 | DB | SQLite → PostgreSQL |
 | 인증 | 토큰(JWT) 기반 |
-| AI | GPT-5.5 API |
+| AI | GPT-5.6 API |
 | 배포 | Cloud / GitHub Actions |
 
 ## Part 4 진행 로드맵
@@ -8208,7 +8273,7 @@ TaskFlow의 차별점입니다. AI가 할 일 목록을 보고 "오늘 뭐부터
 AI 우선순위 추천 기능을 추가하려고 해.
 - 입력: 사용자의 미완료 할 일 목록(제목, 마감일)
 - 출력: 우선순위 순서 + 각 항목에 한 줄 이유
-- GPT-5.5 API를 app/services/ai.py 에서 호출
+- GPT-5.6 API를 app/services/ai.py 에서 호출
 - API 키는 .env(OPENAI_API_KEY)
 단계 계획을 세워줘.
 ```
@@ -8218,7 +8283,7 @@ AI 우선순위 추천 기능을 추가하려고 해.
 ```text
 app/services/ai.py 를 만들어줘:
 - suggest_priority(todos: list) -> list 함수
-- OpenAI API(GPT-5.5)로 할 일 목록을 보내 우선순위와 이유를 받는다
+- OpenAI API(GPT-5.6)로 할 일 목록을 보내 우선순위와 이유를 받는다
 - 응답을 파싱해 [{title, reason, rank}] 형태로 반환
 - API 키 없거나 호출 실패 시: 마감일 기준 정렬로 폴백(graceful degradation)
 - 주석은 한국어, 키는 환경변수에서
@@ -8238,7 +8303,7 @@ def suggest_priority(todos: list) -> list:
     if not os.environ.get("OPENAI_API_KEY"):
         return _fallback_by_due(todos)   # 폴백
     try:
-        # GPT-5.5에 할 일 목록을 주고 우선순위 요청
+        # GPT-5.6에 할 일 목록을 주고 우선순위 요청
         # ... (응답 파싱) ...
         return ranked
     except Exception:
@@ -8696,8 +8761,8 @@ github로 'TaskFlow v1' 마일스톤의 남은 이슈를 가져와서,
 ## 모델 배분으로 비용 최적화
 
 ```text
-탐색·스캔 서브에이전트는 gpt-5.4-mini로 빠르게,
-최종 종합·설계 판단은 gpt-5.5로 해줘.
+탐색·스캔 서브에이전트는 gpt-5.6-luna로 빠르게,
+최종 종합·설계 판단은 gpt-5.6-sol로 해줘.
 ```
 
 "잡일은 싼 모델, 판단은 비싼 모델"(033·071번)을 실전에 적용합니다.
@@ -8907,7 +8972,7 @@ TaskFlow 전체를 리뷰해줘. 우선순위:
 
 ```text
 서브에이전트로 영역별 심층 리뷰를 병렬로 해줘:
-- 보안 전문 관점 (gpt-5.5, 추론 high)
+- 보안 전문 관점 (gpt-5.6-sol, 추론 high)
 - 성능 관점
 - 테스트 견고성 관점
 각자 발견 사항만 요약 보고 → 종합해줘.
@@ -9203,10 +9268,10 @@ Codex 설정의 주요 키를 한자리에 정리합니다. 위치는 `~/.codex/
 ## 모델·추론
 
 ```toml
-model = "gpt-5.5"                      # 기본 모델
+model = "gpt-5.6-terra"               # 기본 모델 (sol|terra|luna)
 model_provider = "openai"             # 제공자
-model_reasoning_effort = "medium"     # minimal|low|medium|high|xhigh
-model_context_window = 200000         # (보통 기본값)
+model_reasoning_effort = "medium"     # low|medium|high|xhigh|max|ultra
+model_context_window = 200000         # (보통 기본값. GPT-5.6 한도는 1,050,000)
 ```
 
 ## 인증
@@ -9479,7 +9544,7 @@ Codex가 엉뚱한 걸 함
 → 추론 강도를 낮추거나(008번) 가벼운 모델로(033번). 컨텍스트 줄이기.
 
 응답이 품질이 낮음
-→ gpt-5.5 + 추론 high로 올리기. 컨텍스트(관련 파일)를 더 잘 제공(042번).
+→ gpt-5.6-sol + 추론 high(필요하면 xhigh 이상)로 올리기. 컨텍스트(관련 파일)를 더 잘 제공(042번).
 
 ## 설정 문제
 
@@ -9500,7 +9565,7 @@ MCP 서버가 안 뜸
 ## 비용·한도
 
 토큰을 너무 많이 씀
-→ 컨텍스트 최소화(042번), 단순 작업은 mini로(033번), `/compact` 활용, 서브에이전트 남발 주의(071번).
+→ 컨텍스트 최소화(042번), 단순 작업은 gpt-5.6-luna로(033번), `/compact` 활용, 서브에이전트 남발 주의(071번).
 
 ---
 
@@ -9567,7 +9632,7 @@ Part 4  진짜 서비스를 만들어 출시했다  (실전)
 
 ## 이 책이 진짜 가르친 것
 
-기능과 명령어는 시간이 지나면 바뀝니다. GPT-5.5는 5.6이 되고, 명령어도 달라질 겁니다. 하지만 변하지 않는 것이 있습니다.
+기능과 명령어는 시간이 지나면 바뀝니다. GPT-5.6은 5.7이 되고, 명령어도 달라질 겁니다. 하지만 변하지 않는 것이 있습니다.
 
 - 잘 요청하는 법 — 명확하게, 쪼개서, 검증을 포함해
 - 검증하는 습관 — AI의 답은 초안, 확인은 사람 몫
@@ -9781,7 +9846,7 @@ SDK로 자동화 — Python (베타, `pip install openai-codex`):
 from openai_codex import Codex, Sandbox
 
 with Codex() as codex:
-    thread = codex.thread_start(model="gpt-5.5", sandbox=Sandbox.workspace_write)
+    thread = codex.thread_start(model="gpt-5.6-sol", sandbox=Sandbox.workspace_write)
     result = thread.run("리포의 테스트를 실행하고 실패를 고쳐줘")
     print(result.final_response)
 ```
@@ -9827,12 +9892,14 @@ with Codex() as codex:
 | 설치 가이드 (저장소 문서) | https://github.com/openai/codex/blob/main/docs/install.md |
 | GitHub Action 저장소 | https://github.com/openai/codex-action |
 | Claude Code용 Codex 플러그인 | https://github.com/openai/codex-plugin-cc |
-| 공식 문서 (개발자 포털) | https://developers.openai.com/codex |
-| 빠른 시작 | https://developers.openai.com/codex/quickstart |
-| SDK 문서 | https://developers.openai.com/codex/sdk |
-| GitHub Action 문서 | https://developers.openai.com/codex/github-action |
-| 변경 이력(Changelog) | https://developers.openai.com/codex/changelog |
+| 공식 문서 (개발자 포털) | https://learn.chatgpt.com/docs |
+| 모델 목록·선택 가이드 | https://learn.chatgpt.com/docs/models |
+| 설정 레퍼런스 | https://learn.chatgpt.com/docs/config-file/config-reference |
+| 변경 이력(Changelog) | https://learn.chatgpt.com/docs/changelog |
+| API 모델·가격표 | https://developers.openai.com/api/docs/models · https://developers.openai.com/api/docs/pricing |
 | Codex Web (클라우드) | https://chatgpt.com/codex |
+
+> 2026년 중반 Codex 문서가 `developers.openai.com/codex/*` 에서 `learn.chatgpt.com/docs/*` 로 이전했습니다. 이 책 본문에 남아 있는 옛 주소들도 자동으로 새 주소로 연결(308 리다이렉트)되므로 그대로 열어도 됩니다.
 
 > **codex-plugin-cc**는 Claude Code 안에서 Codex를 불러 쓰는 공식 플러그인입니다. 로컬 Codex CLI·앱 서버를 통해 같은 인증·설정을 공유하며, `/codex:review`(코드 리뷰), `/codex:adversarial-review`(설계·위험 도전 리뷰), `/codex:rescue`(작업 위임), `/codex:status`·`/codex:result`·`/codex:cancel`(백그라운드 작업 관리) 같은 슬래시 명령을 제공합니다. 한 에디터에서 두 에이전트를 교차로 쓰고 싶을 때 유용합니다.
 
@@ -9880,6 +9947,7 @@ cd codex/codex-rs   # Rust 코어(Cargo 워크스페이스)
 ---
 
 > 이 책의 저장소: https://github.com/lsszz2100/Codex_King · 문의: leemanrank@gmail.com
+
 
 ---
 

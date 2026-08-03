@@ -30,7 +30,7 @@ Part 4, 실전 프로젝트에 오신 걸 환영합니다. 지금부터 배운 �
 [브라우저]
    │  HTTP
    ▼
-[FastAPI 백엔드] ── [AI 모듈(GPT-5.5 API)]  ← 우선순위 추천
+[FastAPI 백엔드] ── [AI 모듈(GPT-5.6 API)]  ← 우선순위 추천
    │
    ▼
 [데이터베이스] SQLite(개발) → PostgreSQL(운영)
@@ -44,7 +44,7 @@ Part 4, 실전 프로젝트에 오신 걸 환영합니다. 지금부터 배운 �
 | 프런트엔드 | HTML · CSS · JS |
 | DB | SQLite → PostgreSQL |
 | 인증 | 토큰(JWT) 기반 |
-| AI | GPT-5.5 API |
+| AI | GPT-5.6 API |
 | 배포 | Cloud / GitHub Actions |
 
 ## Part 4 진행 로드맵

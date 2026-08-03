@@ -8,7 +8,7 @@ Codex의 동작을 정의하는 설정 파일입니다. 모델, 승인 정책, �
 
 ```toml
 # 가장 단순한 예
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 ```
 
@@ -29,7 +29,7 @@ model_reasoning_effort = "medium"
 
 ```text
 ~/.codex/config.toml 파일을 열어서 현재 설정을 보여줘.
-없으면 기본 모델을 gpt-5.5로 설정하는 파일을 만들어줘.
+없으면 기본 모델을 gpt-5.6-terra로 설정하는 파일을 만들어줘.
 ```
 
 또는 직접:
@@ -44,7 +44,7 @@ mkdir -p ~/.codex
 
 ```toml
 # 모델과 추론 강도
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 
 # 샌드박스 모드 (안전) — 038번
@@ -80,7 +80,7 @@ memories = true
 ## 실습
 
 ```text
-~/.codex/config.toml 에 기본 모델을 gpt-5.5,
+~/.codex/config.toml 에 기본 모델을 gpt-5.6-terra,
 추론 강도를 medium으로 설정해줘. 그리고 적용됐는지 /status로 보여줘.
 ```
 
