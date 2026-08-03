@@ -1,8 +1,8 @@
-# 048. MCP 서버 연결하기 (`codex mcp add`)
+## 048. MCP 서버 연결하기 (`codex mcp add`)
 
 이제 실제로 MCP 서버를 Codex에 붙여 봅니다. 생각보다 간단합니다.
 
-## 방법 1: CLI로 추가 (가장 쉬움)
+### 방법 1: CLI로 추가 (가장 쉬움)
 
 ```bash
 codex mcp add <서버이름> -- <실행명령>
@@ -20,7 +20,7 @@ codex mcp add context7 -- npx -y @upstash/context7-mcp
 codex mcp add <이름> --env API_KEY=값 -- <명령>
 ```
 
-## 방법 2: config.toml에 직접
+### 방법 2: config.toml에 직접
 
 STDIO 서버 예:
 
@@ -43,7 +43,7 @@ bearer_token_env_var = "EXAMPLE_TOKEN"
 
 추가로 시작 타임아웃, 도구 승인 모드, 사용할 도구 목록 등을 지정할 수 있습니다.
 
-## 연결 확인
+### 연결 확인
 
 ```text
 /mcp
@@ -51,7 +51,7 @@ bearer_token_env_var = "EXAMPLE_TOKEN"
 
 추가한 서버와 그 서버가 제공하는 도구들이 보이면 성공입니다.
 
-## 사용해 보기
+### 사용해 보기
 
 연결되면 Codex가 자연스럽게 그 도구를 씁니다.
 
@@ -62,7 +62,7 @@ context7로 FastAPI 최신 문서를 참고해서,
 
 Codex가 Context7 도구를 호출해 최신 문서를 가져와 코드를 작성합니다.
 
-## 서버 관리
+### 서버 관리
 
 ```bash
 codex mcp list          # 등록된 서버 목록 (환경에 따라)
@@ -70,7 +70,7 @@ codex mcp list          # 등록된 서버 목록 (환경에 따라)
 
 설정 파일에서 직접 제거하거나 비활성화할 수도 있습니다. 세부 명령은 `codex mcp --help`로 확인하세요.
 
-## 보안 체크리스트
+### 보안 체크리스트
 
 - [ ] 서버 출처가 신뢰할 만한가? (공식·유명 패키지인가)
 - [ ] 어떤 권한·데이터에 접근하는가?
@@ -79,7 +79,7 @@ codex mcp list          # 등록된 서버 목록 (환경에 따라)
 
 > MCP는 강력한 만큼, 신뢰의 문을 여는 일입니다. 모르는 서버를 함부로 붙이지 마세요.
 
-## 흔한 문제 해결
+### 흔한 문제 해결
 
 서버가 안 뜸 (`npx` 못 찾음)
 → Node.js가 설치돼 있어야 합니다. `node --version`으로 확인.
@@ -90,7 +90,7 @@ codex mcp list          # 등록된 서버 목록 (환경에 따라)
 도구가 안 보임
 → `/mcp`로 상태 확인, 설정 파일의 이름·명령 오타 점검.
 
-## 실습
+### 실습
 
 ```text
 1. codex mcp add context7 -- npx -y @upstash/context7-mcp
@@ -100,14 +100,12 @@ codex mcp list          # 등록된 서버 목록 (환경에 따라)
 
 (Context7가 어렵다면, 환경에서 제공되는 다른 간단한 MCP 서버로 대체해도 됩니다.)
 
-## 정리
+### 정리
 
 - `codex mcp add <이름> -- <명령>` 으로 간단 추가
 - 또는 `config.toml`의 `[mcp_servers.<이름>]`
 - STDIO(로컬)·HTTP(원격, Bearer/OAuth) 지원
 - 신뢰된 서버만, 키는 환경 변수로
 - `/mcp`로 상태 확인
-
----
 
 다음 절에서 인기 MCP 서버들의 실전 활용을 봅니다.

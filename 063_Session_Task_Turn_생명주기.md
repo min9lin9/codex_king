@@ -1,4 +1,4 @@
-# 063. Session > Task > Turn 생명주기
+## 063. Session > Task > Turn 생명주기
 
 ```mermaid
 flowchart TB
@@ -10,7 +10,7 @@ flowchart TB
 
 Codex의 작업은 Session > Task > Turn 이라는 3단 계층으로 구성됩니다. 이 구조를 알면 "왜 작업이 중단됐지?", "어떻게 이어가지?"가 명쾌해집니다.
 
-## 3단 계층 한눈에
+### 3단 계층 한눈에
 
 ```text
 Session (설정·상태)
@@ -20,7 +20,7 @@ Session (설정·상태)
             └─ Turn ...
 ```
 
-## 1) Session — 설정과 상태
+### 1) Session — 설정과 상태
 
 > 현재 Codex의 구성과 상태입니다.
 
@@ -28,7 +28,7 @@ Session (설정·상태)
 - 모델, 샌드박스, 승인 정책, 작업 폴더 등이 Session에 담깁니다.
 - 세션을 재구성하면 진행 중인 작업은 중단됩니다.
 
-## 2) Task — 하나의 작업
+### 2) Task — 하나의 작업
 
 > 사용자 입력에 대응해 Codex가 수행하는 한 덩어리 작업입니다.
 
@@ -45,7 +45,7 @@ Task가 끝나는 조건:
 
 > "한 번에 하나의 Task"라서, 병렬 작업은 여러 Codex 인스턴스(스레드)로 한다고 했던 것(043번)이 여기서 이해됩니다.
 
-## 3) Turn — 한 사이클
+### 3) Turn — 한 사이클
 
 > Task 안의 한 번의 반복입니다.
 
@@ -65,7 +65,7 @@ Turn 3: (할 일 없음) → Task 종료
 
 이 반복이 바로 에이전트가 "스스로 고쳐가며 일하는" 메커니즘입니다(010번).
 
-## response_id — 북마크와 분기
+### response_id — 북마크와 분기
 
 각 Turn이 끝나면 모델의 최종 응답에 `response_id`가 붙어 Session에 저장됩니다.
 
@@ -74,7 +74,7 @@ Turn 3: (할 일 없음) → Task 종료
 
 > `response_id`는 OpenAI Responses API의 응답 ID와 같습니다. 그래서 나중 세션에서도 작업 맥락을 재개할 수 있습니다.
 
-## 실전 매핑
+### 실전 매핑
 
 | 당신이 한 일 | 내부 |
 |---|---|
@@ -85,13 +85,11 @@ Turn 3: (할 일 없음) → Task 종료
 | `/fork` | 과거 `response_id`에서 분기 |
 | `codex resume` | 저장된 스레드로 Session 재개 |
 
-## 정리
+### 정리
 
 - 계층: Session(설정/상태) > Task(한 작업) > Turn(한 사이클)
 - 한 Session엔 한 Task만 동시 실행(병렬은 인스턴스 분리)
 - Turn의 출력이 다음 Turn의 입력 → 자가 수정 루프
 - `response_id`가 북마크 → 재개·분기의 기반
-
----
 
 다음 절에서 엔진이 모델과 실제로 통신하는 방식(WebSocket)을 봅니다.
